@@ -1,0 +1,18 @@
+ESENTIA - Estructura para mantenimiento mensual
+
+index.html = diseño/base del sitio (casi no se toca)
+config.js = número de WhatsApp y configuración general
+products.js = productos, precios y disponibilidad (archivo que se actualiza cada mes)
+images.js = fotografías actuales (solo cambia si entran productos nuevos o cambian fotos)
+app.js = funciones: buscador, filtros, carrito, descuentos
+
+Regla de disponibilidad:
+available:true  = se muestra
+available:false = agotado, NO aparece en la tienda
+
+Flujo mensual:
+1. Compartir los nuevos PDF con ChatGPT.
+2. Se comparan productos/precios contra products.js.
+3. Lo marcado AGOTADO se deja available:false.
+4. Se generan los archivos actualizados.
+5. En GitHub normalmente solo se reemplaza products.js; images.js solo si hay fotos/productos nuevos.
